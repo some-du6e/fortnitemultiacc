@@ -1,5 +1,7 @@
 import os
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+# sybau pygame
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = True
 import pygame
 import src.gui
 
@@ -8,11 +10,14 @@ def main():
     def massive():
         pygame.mixer.music.load("src/massive.mp3")
         pygame.mixer.music.play()
+        os.system("python %USERPROFILE%/.config/fnmanager/src/gui.py")
     def lazyahh():
         pygame.mixer.music.load("src/massive.mp3")
         pygame.mixer.music.play()
-        os.system()
+        # peak code
+        os.system("start \"\" https://github.com/some-du6e/fortnitemultiacc/blob/main/readme.md")
         os.system("python %USERPROFILE%/.config/fnmanager/src/lowtaperfade.py")
+        exit()
 
     window = Tk()
     # tuff

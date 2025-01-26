@@ -1,18 +1,15 @@
 import os
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 # sybau pygame
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = True
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "1"
 import pygame
-import src.gui
+import gui
 
 def main():
-    pygame.mixer.init()
-    def massive():
-        pygame.mixer.music.load("massive.mp3")
-        pygame.mixer.music.play()
-
-
-
+    def sure():
+        with open(os.path.expanduser('~/.config/fnmanager/ignoresafetywarnings'), 'w') as fp:
+            pass
+        window.destroy()
 
     window = Tk()
     # tuff
@@ -44,7 +41,7 @@ def main():
     button = Button(
         window,
         text="yeah i read it",
-        command=lambda: massive()
+        command=lambda: sure()
     )
     button.place(x=WIDTH / 2 - 50, y=HEIGHT - 50)
     button = Button(

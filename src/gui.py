@@ -1,6 +1,8 @@
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
-import src.manager
-
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
+import accountmanager
 def gui():
     window = Tk()
     # tuff
@@ -29,7 +31,14 @@ def gui():
         fill="#000000",
         font=("ComicNeue Regular", 32 * -1)
     )
-
+    canvas.create_text(
+        WIDTH / 2 - 150,
+        500,
+        anchor="nw",
+        text="hawjtyag",
+        fill="#000000",
+        font=("ComicNeue Regular", 32 * -1)
+    )
     # Create entries
     for i in range(1):  # Adjust the range as needed
         canvas.create_rectangle(
@@ -40,6 +49,6 @@ def gui():
             fill="#D9D9D9",
             outline=""
         )
-
+    print(accountmanager.get_accounts())
     window.resizable(False, False)
     window.mainloop()

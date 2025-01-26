@@ -1,23 +1,23 @@
 import os
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 # sybau pygame
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = True
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "1"
 import pygame
-import src.gui
+from dotenv import load_dotenv
+import gui
+
+load_dotenv()
 
 def main():
     pygame.mixer.init()
     def massive():
+        os.system("python ./src/gui.py")
         pygame.mixer.music.load("src/massive.mp3")
         pygame.mixer.music.play()
-        os.system("python %USERPROFILE%/.config/fnmanager/src/gui.py")
-    def lazyahh():
-        pygame.mixer.music.load("src/massive.mp3")
-        pygame.mixer.music.play()
-        # peak code
-        os.system("start \"\" https://github.com/some-du6e/fortnitemultiacc/blob/main/readme.md")
-        os.system("python %USERPROFILE%/.config/fnmanager/src/lowtaperfade.py")
-        exit()
+        window.destroy()
+        gui.gui()
+
+
 
     window = Tk()
     # tuff
@@ -35,6 +35,13 @@ def main():
         highlightthickness=0,
         relief="ridge"
     )
+    def lazyahh():
+        pygame.mixer.music.load("src/massive.mp3")
+        pygame.mixer.music.play()
+        # peak code
+        os.system("start \"\" https://github.com/some-du6e/fortnitemultiacc/blob/main/readme.md")
+        window.destroy()
+        os.system("python ./src/lowtaperfade.py")
 
     canvas.place(x=0, y=0)
     # Create title

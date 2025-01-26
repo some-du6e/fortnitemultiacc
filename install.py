@@ -8,7 +8,7 @@ try:
     import time
     import tkinter
     # sybau pygame
-    os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = True
+    os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "1"
     import pygame
 except ImportError:
     print("Installing required modules...")

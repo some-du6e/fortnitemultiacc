@@ -1,2 +1,4 @@
 # prevent getting my key revoked
 config.json
+
+accounts.json
